@@ -1,0 +1,49 @@
+{
+  "name": "typescript-koa-boilerplate",
+  "version": "0.0.0",
+  "description": "An example/boilerplate for using Koa 2.0 + TypeScript 2.0",
+  "keywords": [],
+  "watch": {
+    "restart:dev": {
+      "patters": [
+        "src"
+      ]
+    }
+  },
+  "scripts": {
+    "clean": "rm -rf ./build",
+    "build:dev": "npm run clean && ./node_modules/.bin/tsc && `npm bin`/babel compile -d build && rm -rf ./compile",
+    "start": "node ./build/app.js",
+    "restart:dev": "npm run build:dev && npm start",
+    "watch": "npm-watch"
+  },
+  "author": "Samier Saeed",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ss108/typescript-koa-boilerplate"
+  },
+  "dependencies": {
+    "@types/knex": "0.0.32",
+    "@types/koa-router": "^7.0.20",
+    "@types/lodash": "^4.14.36",
+    "@types/node": "6.0.42",
+    "@types/q": "0.0.30",
+    "co": "^4.6.0",
+    "co-views": "^2.1.0",
+    "ejs": "^2.4.2",
+    "json-loader": "^0.5.4",
+    "koa": "^2.0.0",
+    "koa-better-body": "^2.0.1",
+    "koa-convert": "^1.2.0",
+    "koa-ejs": "^3.0.0",
+    "koa-logger": "^2.0.0",
+    "koa-mount": "^1.3.0",
+    "koa-route": "^3.1.0",
+    "koa-router-decorators": "^0.4.5",
+    "koa-session": "^3.3.1",
+    "koa-static": "^2.0.0",
+    "koa-static-folder": "^0.1.6",
+    "lodash": "^4.13.1",
+    "typescript": "2.1.0-dev.20161009"
+  }
+}
