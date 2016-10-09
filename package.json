@@ -12,7 +12,7 @@
   },
   "scripts": {
     "clean": "rm -rf ./build",
-    "build:dev": "npm run clean && ./node_modules/.bin/tsc && `npm bin`/babel compile -d build && rm -rf ./compile",
+    "build:dev": "npm run clean && ./node_modules/.bin/tsc",
     "start": "node ./build/app.js",
     "restart:dev": "npm run build:dev && npm start",
     "watch": "npm-watch"
