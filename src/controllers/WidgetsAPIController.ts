@@ -21,7 +21,7 @@ async function getAll(ctx: Koa.Context): Promise<void> {
 
 async function get(ctx): Promise<void> {
     let all: Widget[] = _getAll();
-
+    let id: number = Number(ctx.params.id); //everything koa-router puts on ctx.params is a string
 
     let widget: Widget = all.filter((w) => {
         return w.id === 1;
