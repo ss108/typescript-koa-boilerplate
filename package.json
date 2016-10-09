@@ -28,6 +28,7 @@
     "@types/lodash": "^4.14.36",
     "@types/node": "6.0.42",
     "@types/q": "0.0.30",
+    "class-transformer": "0.1.1",
     "co": "^4.6.0",
     "co-views": "^2.1.0",
     "ejs": "^2.4.2",
