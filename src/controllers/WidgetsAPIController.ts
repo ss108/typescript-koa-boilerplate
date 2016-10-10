@@ -2,7 +2,7 @@ import * as Koa from "koa";
 import * as Router from 'koa-router';
 import * as fs from "fs";
 import * as path from "path";
-import {plainToClass} from "class-transformer";
+import { plainToClass } from "class-transformer";
 
 import Widget from "../models/widget";
 
@@ -10,7 +10,7 @@ import Widget from "../models/widget";
 function _getAll(): Widget[] {
     let filePath: string = path.join(__dirname, "..", "..", "widgets.json");
     let rawFile: string = fs.readFileSync(filePath, 'utf8');
-    let objects:any[] = JSON.parse(rawFile);
+    let objects: any[] = JSON.parse(rawFile);
     return plainToClass(Widget, objects);
 }
 
@@ -24,7 +24,7 @@ async function get(ctx): Promise<void> {
     let id: number = Number(ctx.params.id); //everything koa-router puts on ctx.params is a string
 
     let widget: Widget = all.filter((w) => {
-        return w.id === 1;
+        return w.id === id;
     })[0];
 
     ctx.body = widget;
