@@ -30,16 +30,9 @@ async function get(ctx): Promise<void> {
     ctx.body = widget;
 }
 
-async function stackedEndpoint(ctx: Koa.Context, next: Function): Promise<void> {
-    console.log('stacked');
-    // await next();
-    console.log('dsdsfs');
-}
-
 const router = new Router({ prefix: '/api/widgets' });
 
 router.get('/', getAll);
 router.get('/:id', get);
-// router.get('/stacked', stackedEndpoint);
 
 export default router;
