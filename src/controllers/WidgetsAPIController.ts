@@ -30,9 +30,14 @@ async function get(ctx): Promise<void> {
     ctx.body = widget;
 }
 
+async function create(ctx: Koa.Context) : Promise<void> {
+    throw new Error("Endpoint not implemented!");
+}
+
 const router = new Router({ prefix: '/api/widgets' });
 
 router.get('/', getAll);
 router.get('/:id', get);
+router.post('/', create);
 
 export default router;
